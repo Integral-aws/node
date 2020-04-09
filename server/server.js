@@ -5,12 +5,16 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-const obtenerFrutas = require('./bo');
+const bo = require('./bo');
 
-app.get('/node', async function(req, res){
-    const frutas = await obtenerFrutas();
-    console.log("Terminando llamada", frutas);
-    res.send(frutas);
+app.get('/node/serv1', async function(req, res){
+    const respuesta = await bo.obtenerFrutas();
+    res.send(respuesta);
+});
+
+app.get('/node/serv2', async function(req, res){
+    const respuesta = await bo.obtenerFrutasyLegumbres();
+    res.send(respuesta);
 });
 
 app.listen(3000, () => {

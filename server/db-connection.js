@@ -9,7 +9,7 @@ const pool = mysql.createPool({
 });
 
 pool.getConnection( (err, connection) => {
-    if (err) { console.log("If conexion", err);
+    if (err) {
         if (err.code === 'PROTOCOL_CONNECTION_LOST') {
             console.error('Database connection was closed.')
         }
@@ -18,6 +18,9 @@ pool.getConnection( (err, connection) => {
         }
         if (err.code === 'ECONNREFUSED') {
             console.error('Database connection was refused.')
+        }
+        if (err.code === 'ENOTFOUND') {
+            console.error('Database not found.')
         }
     } //console.log("If conexion err2", err);
     if (connection) connection.release()
