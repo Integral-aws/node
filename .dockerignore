@@ -1,0 +1,5 @@
+reports/
+tests/
+.mocharc.js
+stryker.conf.js
+.stryker-tmp/
