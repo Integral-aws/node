@@ -21,7 +21,7 @@ pipeline{
         stage('Unit Testing') {
             steps {
                 sh 'ls -l'
-                sh 'npm run test'
+                sh 'npm run test --prefix //c/Users/Mou/Docker/jenkins/jenkins_home/workspace/Pipeline_Integral_Node'
             }
         }
         stage('Mutation Testing') {
