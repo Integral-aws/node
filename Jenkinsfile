@@ -13,7 +13,7 @@ pipeline{
                 sh '''
                 node --version
                 npm --version
-                npm install --no-bin-links
+                sudo npm install --no-bin-links
                 '''
             }
         }
