@@ -21,7 +21,7 @@ pipeline{
         stage('Unit Testing') {
             steps {
                 sh 'ls -l'
-                sh 'npm run test --prefix .'
+                sh 'npm run test'
             }
         }
         stage('Mutation Testing') {
