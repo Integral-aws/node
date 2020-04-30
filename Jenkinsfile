@@ -14,7 +14,7 @@ pipeline{
                 sh '''
                 node --version
                 npm --version
-                npm install
+                npm install --no-bin-links
                 '''
             }
         }
