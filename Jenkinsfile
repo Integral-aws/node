@@ -5,7 +5,8 @@ pipeline{
         }
     }
     environment {
-        HOME = '//c/Users/Mou/Docker/jenkins/jenkins_home/workspace/Pipeline_Integral_Node'
+        // HOME = '//c/Users/Mou/Docker/jenkins/jenkins_home/workspace/Pipeline_Integral_Node'
+        HOME = '.'
     }
     stages {
         stage('Build') {
@@ -13,7 +14,7 @@ pipeline{
                 sh '''
                 node --version
                 npm --version
-                sudo npm install --no-bin-links
+                npm install --no-bin-links
                 '''
             }
         }
