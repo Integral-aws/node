@@ -20,10 +20,10 @@ pipeline{
             }
         }
         stage('Unit Testing') {
-         /*   steps {
+            steps {
                 sh 'ls -l'
-                sh 'npm run mocha "tests/**/*.spec.js" --exit'
-            } */
+                //sh 'npm run mocha "tests/**/*.spec.js" --exit'
+            }
         }
         stage('Mutation Testing') {
             steps {
