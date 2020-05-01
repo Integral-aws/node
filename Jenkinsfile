@@ -7,6 +7,7 @@ pipeline{
     environment {
         // HOME = '//c/Users/Mou/Docker/jenkins/jenkins_home/workspace/Pipeline_Integral_Node'
         HOME = '.'
+        CI = 'true'
     }
     stages {
         stage('Build') {
