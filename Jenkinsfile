@@ -21,8 +21,11 @@ pipeline{
         }
         stage('Unit Testing') {
             steps {
-                sh 'ls -l'
-                //sh 'npm run mocha "tests/**/*.spec.js" --exit'
+                sh '''
+                ls -l
+                npm i -g mocha
+                npm run mocha "tests/**/*.spec.js" --exit
+                '''
             }
         }
         stage('Mutation Testing') {
