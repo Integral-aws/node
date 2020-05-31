@@ -2,7 +2,7 @@ pipeline{
     agent {
         docker {
             image 'node:8'
-            args '-v ${PWD}:/app -w /app'
+            args '-v .:/app -w /app'
             reuseNode true
         }
     }
@@ -25,7 +25,7 @@ pipeline{
             steps {
                 sh '''
                 ls -l
-                npm run ./node_modules/mocha/bin/mocha 'tests/**/*.spec.js' --exit
+                npm run mocha 'tests/**/*.spec.js' --exit
                 '''
             }
         }
