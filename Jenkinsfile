@@ -25,6 +25,7 @@ pipeline{
             steps {
                 sh '''
                 ls -l
+                node ./node_modules/mocha/bin/mocha
                 npm run test
                 '''
             }
