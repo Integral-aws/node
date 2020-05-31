@@ -1,7 +1,9 @@
 pipeline{
     agent {
         docker {
-            image 'node:12'
+            image 'node:12',
+            args '-v ${PWD}:/app -w /app',
+            reuseNode true
         }
     }
     environment {
