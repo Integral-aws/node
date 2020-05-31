@@ -25,8 +25,7 @@ pipeline{
             steps {
                 sh '''
                 ls -l
-                node ./node_modules/mocha/bin/mocha
-                npm run test
+                npm run ./node_modules/mocha/bin/mocha 'tests/**/*.spec.js' --exit
                 '''
             }
         }
