@@ -1,7 +1,7 @@
 pipeline{
     agent {
         docker {
-            image 'node:8'
+            image 'node:12'
             reuseNode true
         }
     }
@@ -24,7 +24,7 @@ pipeline{
             steps {
                 sh '''
                 ls -l
-                npm run mocha 'tests/**/*.spec.js' --exit
+                npm run test
                 '''
             }
         }
