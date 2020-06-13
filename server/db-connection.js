@@ -4,10 +4,10 @@ const { variablesEntorno } = require('./variables-de-entorno');
 const { variables } = variablesEntorno();
 
 const pool = mysql.createPool({
-    host: variables.url_db,
-    user: 'root',
-    password: '5438',
-    database: 'integral'
+    host: variables.db_url,
+    user: variables.db_user,
+    password: variables.db_password,
+    database: variables.db_name
 });
 
 pool.getConnection( (err, connection) => {

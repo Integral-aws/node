@@ -3,7 +3,7 @@ const { variablesEntorno } = require('./variables-de-entorno');
 const { variables } = variablesEntorno();
 
 const obtenerLegumbresDeServicio = async function(){
-    return await axios.get("http://"+variables.ws_url+":3002/java2/serv1")
+    return await axios.get(variables.ws_url)
         .then( (response) => { console.log(response.data);
             if(response.data.error){
                 throw new Error("Error en el servicio: "+data.mensaje);

@@ -24,7 +24,7 @@ app.get('/node/serv2', async function(req, res){
 app.get('/node/test', async function(req, res){
     res.send({
         error: false,
-        mensaje: "Transacción exitosa"
+        mensaje: "Transacción exitosa." + "Java2_url: " + variables.ws_url,
     });
 });
 
