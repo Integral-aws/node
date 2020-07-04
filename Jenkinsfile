@@ -73,9 +73,9 @@ pipeline {
           }
         }
       }
-    }
-  }
-  post{
+    } */
+  } 
+  /* post{
     always{
       slackSend( message: "Deploy *${currentBuild.currentResult}:* - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.RUN_DISPLAY_URL}>)", teamDomain: 'bancoaztecagroup', tokenCredentialId: 'jenkins_slack_netac', color: COLOR_MAP[currentBuild.currentResult], baseUrl: 'https://bancoaztecagroup.slack.com/services/hooks/jenkins-ci/', botUser: false, channel: '#ci')
     }
