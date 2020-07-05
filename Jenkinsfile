@@ -1,10 +1,10 @@
 def COLOR_MAP = ['SUCCESS': 'good', 'FAILURE': 'danger', 'UNSTABLE': 'danger', 'ABORTED': 'danger']
 pipeline {
   agent{
-    kubernetes {
+    /* kubernetes {
       cloud 'kubernetes_dev'
       yamlFile 'JenkinsPod.yml'
-    }
+    } */
   }
   /* environment {
     GIT_SHORT = sh(returnStdout: true, script: 'echo $GIT_COMMIT | cut -c1-10')
