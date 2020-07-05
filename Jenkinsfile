@@ -1,6 +1,10 @@
 def COLOR_MAP = ['SUCCESS': 'good', 'FAILURE': 'danger', 'UNSTABLE': 'danger', 'ABORTED': 'danger']
 pipeline {
   agent{
+    docker {
+            image 'node:12'
+            reuseNode true
+        }
     /* kubernetes {
       cloud 'kubernetes_dev'
       yamlFile 'JenkinsPod.yml'
