@@ -6,10 +6,10 @@ pipeline {
       yamlFile 'JenkinsPod.yml'
     }
   }
-  environment {
+  /* environment {
     GIT_SHORT = sh(returnStdout: true, script: 'echo $GIT_COMMIT | cut -c1-10')
     APP_VERSION = sh(returnStdout: true, script: 'awk \'/version/{gsub(/("|",)/,"",$2);print $2};\' package.json').trim()
-  }
+  } */
   stages {
     stage('ESLint') {
       steps {
