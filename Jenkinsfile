@@ -30,7 +30,10 @@ pipeline{
         }
         stage('Mutation Testing') {
             steps {
-                sh 'npm run stryker'
+                sh '''
+                apk add git
+                npm run stryker
+                '''
             }
         }
         stage('Create Docker Image') {
