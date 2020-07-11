@@ -3,6 +3,7 @@ pipeline{
         docker {
             image 'node:12.18.2-alpine'
             reuseNode true
+            args '-u 0'
         }
     }
     environment {
